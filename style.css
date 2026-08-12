@@ -200,3 +200,142 @@ footer {
         height: 90px;
     }
 }
+
+/* 右下角反馈面板 */
+.feedback {
+    position: fixed;
+    bottom: 60px;
+    right: 24px;
+    z-index: 200;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
+    gap: 12px;
+}
+
+.feedback-toggle {
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+    padding: 12px 20px;
+    background: rgba(255, 255, 255, 0.1);
+    color: #fff;
+    border: 1px solid rgba(255, 255, 255, 0.15);
+    border-radius: 999px;
+    font-size: 14px;
+    font-weight: 500;
+    cursor: pointer;
+    backdrop-filter: blur(20px);
+    -webkit-backdrop-filter: blur(20px);
+    transition: all 0.3s ease;
+}
+
+.feedback-toggle:hover {
+    background: rgba(255, 255, 255, 0.18);
+    transform: translateY(-1px);
+}
+
+.feedback-toggle svg {
+    width: 16px;
+    height: 16px;
+}
+
+.feedback-panel {
+    width: 280px;
+    background: rgba(20, 20, 20, 0.95);
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    border-radius: 16px;
+    padding: 20px;
+    backdrop-filter: blur(20px);
+    -webkit-backdrop-filter: blur(20px);
+    opacity: 0;
+    transform: translateY(10px) scale(0.95);
+    pointer-events: none;
+    transition: all 0.3s ease;
+    transform-origin: bottom right;
+}
+
+.feedback-panel.active {
+    opacity: 1;
+    transform: translateY(0) scale(1);
+    pointer-events: auto;
+}
+
+.feedback-title {
+    font-size: 16px;
+    font-weight: 600;
+    margin-bottom: 4px;
+}
+
+.feedback-desc {
+    font-size: 12px;
+    color: rgba(255, 255, 255, 0.5);
+    margin-bottom: 16px;
+}
+
+.wechat-list {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+.wechat-item {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    padding: 10px 12px;
+    background: rgba(255, 255, 255, 0.05);
+    border-radius: 10px;
+    transition: background 0.2s ease;
+}
+
+.wechat-item:hover {
+    background: rgba(255, 255, 255, 0.1);
+}
+
+.wx-label {
+    font-size: 11px;
+    color: rgba(255, 255, 255, 0.4);
+    background: rgba(255, 255, 255, 0.08);
+    padding: 2px 8px;
+    border-radius: 4px;
+    flex-shrink: 0;
+}
+
+.wx-id {
+    font-size: 14px;
+    font-family: "SF Mono", "Consolas", monospace;
+    flex: 1;
+    color: #a0e8d8;
+}
+
+.wx-copy {
+    font-size: 12px;
+    color: rgba(255, 255, 255, 0.6);
+    cursor: pointer;
+    padding: 4px 10px;
+    border-radius: 6px;
+    background: rgba(255, 255, 255, 0.08);
+    transition: all 0.2s ease;
+    flex-shrink: 0;
+}
+
+.wx-copy:hover {
+    background: rgba(255, 255, 255, 0.15);
+    color: #fff;
+}
+
+.wx-copy.copied {
+    background: #a0e8d8;
+    color: #000;
+}
+
+@media (max-width: 640px) {
+    .feedback {
+        bottom: 50px;
+        right: 16px;
+    }
+    .feedback-panel {
+        width: 260px;
+    }
+}
