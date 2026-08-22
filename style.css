@@ -43,28 +43,31 @@ nav {
     height: 28px;
 }
 
-.nav-download {
-    display: inline-flex;
+.nav-links {
+    display: flex;
     align-items: center;
     gap: 8px;
-    padding: 10px 24px;
-    background: #fff;
-    color: #000;
+}
+
+.nav-link {
+    padding: 8px 20px;
+    color: rgba(255, 255, 255, 0.6);
     text-decoration: none;
     font-size: 14px;
-    font-weight: 600;
+    font-weight: 500;
     border-radius: 999px;
     transition: all 0.3s ease;
 }
 
-.nav-download:hover {
-    transform: translateY(-1px);
-    box-shadow: 0 8px 24px rgba(255, 255, 255, 0.25);
+.nav-link:hover {
+    color: #fff;
+    background: rgba(255, 255, 255, 0.08);
 }
 
-.nav-download svg {
-    width: 16px;
-    height: 16px;
+.nav-link.active {
+    color: #000;
+    background: #fff;
+    font-weight: 600;
 }
 
 /* 主内容区 */
@@ -194,6 +197,10 @@ footer {
     }
     .nav-brand span {
         display: none;
+    }
+    .nav-link {
+        padding: 6px 14px;
+        font-size: 13px;
     }
     .hero-icon {
         width: 90px;
