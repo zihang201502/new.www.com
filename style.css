@@ -74,7 +74,7 @@ nav {
 }
 
 /* ===== 通用 section ===== */
-.hero, .about {
+.hero, .about, .intro {
     min-height: 100vh;
     display: flex;
     flex-direction: column;
@@ -85,7 +85,7 @@ nav {
     position: relative;
 }
 
-.about {
+.about, .intro {
     padding: 120px 24px 70px;
 }
 
@@ -126,10 +126,7 @@ nav {
     letter-spacing: -2px;
     line-height: 1.1;
     margin-bottom: 16px;
-    background: linear-gradient(180deg, #ffffff 0%, #a0e8d8 100%);
-    -webkit-background-clip: text;
-    -webkit-text-fill-color: transparent;
-    background-clip: text;
+    color: #ffffff;
     opacity: 0;
     transform: translateY(20px);
     animation: fadeInUp 1s ease forwards;
@@ -183,6 +180,41 @@ nav {
     }
 }
 
+/* ===== 简介区 ===== */
+.intro h1 {
+    font-size: clamp(40px, 6vw, 72px);
+    font-weight: 700;
+    letter-spacing: -2px;
+    line-height: 1.1;
+    margin-bottom: 14px;
+    color: #ffffff;
+}
+
+.intro-lead {
+    font-size: clamp(16px, 2vw, 20px);
+    font-weight: 300;
+    color: rgba(255, 255, 255, 0.6);
+    letter-spacing: 2px;
+    margin-bottom: 40px;
+}
+
+.intro-body {
+    width: 100%;
+    max-width: 560px;
+    text-align: left;
+}
+
+.intro-body p {
+    font-size: 15px;
+    line-height: 1.9;
+    color: rgba(255, 255, 255, 0.7);
+    margin-bottom: 5px;
+}
+
+.intro-body p:last-child {
+    margin-bottom: 0;
+}
+
 /* ===== 关于我们区 ===== */
 .about h1 {
     font-size: clamp(40px, 6vw, 72px);
@@ -190,10 +222,7 @@ nav {
     letter-spacing: -2px;
     line-height: 1.1;
     margin-bottom: 12px;
-    background: linear-gradient(180deg, #ffffff 0%, #a0e8d8 100%);
-    -webkit-background-clip: text;
-    -webkit-text-fill-color: transparent;
-    background-clip: text;
+    color: #ffffff;
 }
 
 .about .subtitle {
@@ -386,10 +415,7 @@ nav {
     font-size: 22px;
     font-weight: 700;
     margin-bottom: 10px;
-    background: linear-gradient(180deg, #ffffff 0%, #a0e8d8 100%);
-    -webkit-background-clip: text;
-    -webkit-text-fill-color: transparent;
-    background-clip: text;
+    color: #ffffff;
 }
 
 .dev-desc {
@@ -407,6 +433,38 @@ nav {
     background: rgba(255, 255, 255, 0.05);
     border-radius: 10px;
     font-size: 14px;
+}
+
+/* 贡献者 */
+.contributor-section {
+    margin-top: 20px;
+    padding: 32px;
+    background: rgba(160, 232, 216, 0.05);
+    border: 1px solid rgba(160, 232, 216, 0.15);
+    border-radius: 20px;
+    backdrop-filter: blur(20px);
+    -webkit-backdrop-filter: blur(20px);
+    text-align: center;
+    max-width: 560px;
+    width: 100%;
+}
+
+.contributor-title {
+    font-size: 22px;
+    font-weight: 700;
+    margin-bottom: 16px;
+    color: #ffffff;
+}
+
+.contributor-list {
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+}
+
+.contributor-empty {
+    font-size: 13px;
+    color: rgba(255, 255, 255, 0.3);
 }
 
 /* 灯箱 */
